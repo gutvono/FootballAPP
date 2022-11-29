@@ -3,45 +3,18 @@ import * as chai from 'chai';
 // @ts-ignore
 import chaiHttp = require('chai-http');
 
-import App from '../app';
+import { app } from '../app'
 import Example from '../database/models/ExampleModel';
 
 import { Response } from 'superagent';
 
 chai.use(chaiHttp);
 
-const { app } = new App();
-
 const { expect } = chai;
 
-describe('Seu teste', () => {
-  /**
-   * Exemplo do uso de stubs com tipos
-   */
-
-  // let chaiHttpResponse: Response;
-
-  // before(async () => {
-  //   sinon
-  //     .stub(Example, "findOne")
-  //     .resolves({
-  //       ...<Seu mock>
-  //     } as Example);
-  // });
-
-  // after(()=>{
-  //   (Example.findOne as sinon.SinonStub).restore();
-  // })
-
-  // it('...', async () => {
-  //   chaiHttpResponse = await chai
-  //      .request(app)
-  //      ...
-
-  //   expect(...)
-  // });
-
-  it('Seu sub-teste', () => {
-    expect(false).to.be.eq(true);
+describe('Testando rota /', () => {
+  it('requisição feita com sucesso', async () => {
+    const res = await chai.request(app).get('/');
+    expect(res.body).to.deep.equal({ ok: true })
   });
 });
