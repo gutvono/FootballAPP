@@ -1,9 +1,7 @@
 import { INTEGER, STRING, Model } from 'sequelize';
 import db from '.';
-// import OtherModel from './OtherModel';
 
 class User extends Model {
-  // declare <campo>: <tipo>;
   declare readonly id: number;
   declare username: string;
   declare email: string;
@@ -12,7 +10,6 @@ class User extends Model {
 }
 
 User.init({
-  // ... Campos
   id: {
     type: INTEGER,
     allowNull: false,

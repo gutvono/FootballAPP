@@ -14,7 +14,6 @@ export default class LoginService implements ILogin {
   ) {}
 
   static validateLogin(email: string, password: string): void {
-    // const rgx = /\S+@\S+\.\S+/; rgx.test(email)
     if (!email || !password) {
       throw new Exception(400, 'All fields must be filled');
     }
