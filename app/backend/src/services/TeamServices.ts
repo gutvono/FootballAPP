@@ -13,7 +13,6 @@ export default class TeamService {
 
   public async getById(paramId: string): Promise<Teams | null> {
     const team = await this.teamModel.findOne({ where: { id: paramId } });
-    console.log(team);
 
     return team;
   }

@@ -1,5 +1,6 @@
 import 'dotenv/config';
-import { JsonWebTokenError, JwtPayload, Secret, sign, SignOptions, verify } from 'jsonwebtoken';
+import { JwtPayload, Secret, sign, SignOptions, verify } from 'jsonwebtoken';
+import Exception from './http.exception';
 
 interface IJwt {
   sign(payload: JwtPayload): string;
@@ -26,7 +27,7 @@ export default class Jwt implements IJwt {
       const payload = verify(token, this.secret);
       return payload as JwtPayload;
     } catch (error) {
-      throw new JsonWebTokenError('Token inválido');
+      throw new Exception(401, 'Token must be a valid token');
     }
   }
 }

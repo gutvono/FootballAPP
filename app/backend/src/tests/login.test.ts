@@ -18,6 +18,14 @@ describe('Testes da rota login', () => {
   let chaiHttpResponse: Response;
 
   before(async () => {
-    sinon.stub(User, 'findOne'). resolves (userTests as User)
+    sinon.stub(User, 'findOne').resolves(userTests as User);
+  });
+
+  after(() => {
+    (User.findOne as sinon.SinonStub).restore();
+  });
+
+  describe('realiza o teste de login "post"', () => {
+    
   })
 })

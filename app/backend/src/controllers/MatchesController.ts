@@ -11,4 +11,16 @@ export default class MatchesController {
       : await this.services.getMatchInProgress(String(inProgress));
     return res.status(200).json(matches);
   }
+
+  public async finishMatch({ params }: Request, res: Response): Promise<Response> {
+    this.services.finishMatch(Number(params.id));
+    return res.status(200).json({ message: 'Finished' });
+  }
+
+  public async changeMatchStatus({ body, headers }: Request, res: Response): Promise<Response> {
+    this.services.matchCreateAuth(headers.authorization as string);
+    this.services.matchTeamsValidate(body);
+    const match = await this.services.matchCreate(body);
+    return res.status(201).json(match);
+  }
 }
