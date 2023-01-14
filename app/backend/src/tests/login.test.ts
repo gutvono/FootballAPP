@@ -1,13 +1,9 @@
-import chaiHttp from "chai-http";
-import * as sinon from 'sinon';
+// @ts-ignore
+import chaiHttp = require('chai-http');
 import * as chai from 'chai';
-import * as bcryptjs from 'bcryptjs';
-import * as jsonwebtoken from 'jsonwebtoken';
-import { Response } from 'superagent';
 import App from '../app';
-import User from '../database/models/User';
 import { invalidLogin, userTests, loginTests } from "./mocks/userMock";
-import { before } from "node:test";
+// import { Response } from 'superagent';
 
 chai.use(chaiHttp);
 
@@ -15,17 +11,38 @@ const { app } = new App();
 const { expect } = chai;
 
 describe('Testes da rota login', () => {
-  let chaiHttpResponse: Response;
+  // let chaiHttpResponse: Response;
 
-  before(async () => {
-    sinon.stub(User, 'findOne').resolves(userTests as User);
+  it('Permite acesso com dados válidos', async () => {
+    const { status, body: { token } } = await chai.request(app).post('/login').send(loginTests);
+    expect(status).to.be.equal(200);
+
+    // const response = await chai.request(app).get('/login/validation').auth(token, { type: 'bearer' })
+    // expect(response.status).to.be.equal(200);
+    // expect(response.body).to.deep.equal(userTests.role);
   });
 
-  after(() => {
-    (User.findOne as sinon.SinonStub).restore();
+  it('Nega acesso sem email', async () => {
+    const response = await chai.request(app).post('/login').send(invalidLogin[0]);
+    expect(response.status).to.be.equal(400);
+    expect(response.body).to.deep.equal({ message: 'All fields must be filled' })
   });
 
-  describe('realiza o teste de login "post"', () => {
-    
-  })
-})
+  it('Nega acesso sem senha', async () => {
+    const response = await chai.request(app).post('/login').send(invalidLogin[1]);
+    expect(response.status).to.be.equal(400);
+    expect(response.body).to.deep.equal({ message: 'All fields must be filled' })
+  });
+
+  it('Nega acesso com dados inválidos', async () => {
+    const response = await chai.request(app).post('/login').send(invalidLogin[2]);
+    expect(response.status).to.be.equal(401);
+    expect(response.body).to.deep.equal({ message: 'Incorrect email or password' })
+  });
+
+  // it('Retorno da role do usuario', async () => {
+  //   const response = await chai.request(app).get('/login/validate').auth('accessToken', { type: 'bearer' });
+  //   console.log(response);    
+  //   expect(response.body).to.be.equal({ role: userTests.role });
+  // })
+});

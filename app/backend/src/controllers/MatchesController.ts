@@ -19,7 +19,7 @@ export default class MatchesController {
 
   public async changeMatchStatus({ body, headers }: Request, res: Response): Promise<Response> {
     this.services.matchCreateAuth(headers.authorization as string);
-    this.services.matchTeamsValidate(body);
+    await this.services.matchTeamsValidate(body);
     const match = await this.services.matchCreate(body);
     return res.status(201).json(match);
   }

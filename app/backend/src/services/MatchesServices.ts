@@ -49,7 +49,6 @@ export default class MatchesService {
     }
     const home = await this.teamsModel.findByPk(homeTeam);
     const away = await this.teamsModel.findByPk(awayTeam);
-    console.log(home, away);
     if (!home || !away) throw new Exception(404, 'There is no team with such id!');
   }
 

@@ -9,8 +9,8 @@ export const userTests = {
 };
 
 export const loginTests: IUser = {
-  email: 'admin@gmail.com',
-  password: 'admin',
+  email: 'admin@admin.com',
+  password: 'secret_admin',
 };
 
 export const invalidLogin: IUser[] = [

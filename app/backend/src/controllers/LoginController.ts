@@ -14,7 +14,7 @@ export default class LoginController {
   public async userAuth(req: Request, res: Response): Promise<Response> {
     const { authorization } = req.headers;
 
-    const role = await this.services.authLogin(authorization as string);
+    const role = this.services.authLogin(authorization as string);
     return res.status(200).json({ role });
   }
 }
