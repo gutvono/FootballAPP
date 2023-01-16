@@ -1,4 +1,5 @@
 import { ModelStatic } from 'sequelize';
+import { Request } from 'express';
 import Teams from '../database/models/Teams';
 import Matches from '../database/models/Matches';
 import IBodyMatchCreation from '../interfaces/IBodyMatchCreation';
@@ -43,7 +44,6 @@ export default class MatchesService {
   }
 
   public async matchTeamsValidate({ homeTeam, awayTeam }: IBodyMatchCreation): Promise<void> {
-    console.log(homeTeam, awayTeam);
     if (homeTeam === awayTeam) {
       throw new Exception(422, 'It is not possible to create a match with two equal teams');
     }
@@ -62,5 +62,12 @@ export default class MatchesService {
       inProgress: true,
     });
     return newMatch;
+  }
+
+  public async updateMatch({ body, params: { id } }: Request): Promise<void> {
+    await this.matchesModel.update(
+      { ...body },
+      { where: { id } },
+    );
   }
 }

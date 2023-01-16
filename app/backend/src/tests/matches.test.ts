@@ -1,11 +1,15 @@
-// @ts-ignore
-import chaiHttp = require('chai-http');
 import * as sinon from 'sinon';
 import * as chai from 'chai';
+import * as jwt from 'jsonwebtoken';
+
+// @ts-ignore
+import chaiHttp = require('chai-http');
+
 import App from '../app';
 import Matches from '../database/models/Matches';
+
 import { Response } from 'superagent';
-import { getMatches } from './mocks/matchesMocks';
+import { getMatches, matchCreate, createdMatchReturn } from './mocks/matchesMocks';
 
 chai.use(chaiHttp);
 
@@ -16,7 +20,7 @@ describe('Testes da rota /matches', () => {
   let chaiHttpResponse: Response;
 
   afterEach(() => {(Matches.findAll as sinon.SinonStub).restore()});
-
+  
   it('Busca todas as partidas', async () => {
     sinon.stub(Matches, 'findAll').resolves(getMatches as unknown[] as Matches[]);
   
@@ -42,5 +46,15 @@ describe('Testes da rota /matches', () => {
 
     expect(chaiHttpResponse.status).to.be.equal(200);
     expect(chaiHttpResponse.body).to.deep.equal([getMatches[0]]);
+  });
+
+  it('Cria partida com sucesso', async () => {
+    sinon.stub(jwt, 'verify').resolves({ id: 1 });
+    sinon.stub(Matches, 'create').resolves(createdMatchReturn as Matches);
+
+    chaiHttpResponse = await chai.request(app).post('/matches').send(matchCreate).set('Authorization', 'something');
+
+    expect(chaiHttpResponse.status).to.be.equal(201);
+    expect(chaiHttpResponse.body).to.deep.equal(createdMatchReturn);
   });
 });

@@ -1,5 +1,30 @@
-export const matchCreate = {
+import IBodyMatchCreation from "../../interfaces/IBodyMatchCreation";
+
+export const matchCreate: IBodyMatchCreation = {
+  "homeTeam": 16,
+  "awayTeam": 9,
+  "homeTeamGoals": 2,
+  "awayTeamGoals": 2
+};
+
+export const createdMatchReturn = {
+  "id": 49,
+  "homeTeam": 16,
+  "awayTeam": 9,
+  "homeTeamGoals": 2,
+  "awayTeamGoals": 2,
+  "inProgress": true
+};
+
+export const matchCreateEqualTeams: IBodyMatchCreation = {
   "homeTeam": 9,
+  "awayTeam": 9,
+  "homeTeamGoals": 2,
+  "awayTeamGoals": 2
+};
+
+export const matchCreateNonExistingTeams: IBodyMatchCreation = {
+  "homeTeam": 99,
   "awayTeam": 9,
   "homeTeamGoals": 2,
   "awayTeamGoals": 2
@@ -34,4 +59,4 @@ export const getMatches = [
       "teamName": "Santos"
     }
   }
-]
+];
