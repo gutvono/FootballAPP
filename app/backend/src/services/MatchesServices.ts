@@ -40,6 +40,8 @@ export default class MatchesService {
       { inProgress: false },
       { where: { id } },
     );
+    console.log(result);
+
     if (result !== 1) throw new Exception(404, 'Update unsuccessful');
   }
 

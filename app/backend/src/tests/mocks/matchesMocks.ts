@@ -59,4 +59,10 @@ export const getMatches = [
       "teamName": "Santos"
     }
   }
+
 ];
+
+export const updateMatchMock = {
+  "homeTeamGoals": 3,
+  "awayTeamGoals": 1
+};

@@ -9,7 +9,7 @@ import App from '../app';
 import Matches from '../database/models/Matches';
 
 import { Response } from 'superagent';
-import { getMatches, matchCreate, createdMatchReturn } from './mocks/matchesMocks';
+import { getMatches, matchCreate, createdMatchReturn, updateMatchMock } from './mocks/matchesMocks';
 
 chai.use(chaiHttp);
 
@@ -18,8 +18,6 @@ const { expect } = chai;
 
 describe('Testes da rota /matches', () => {
   let chaiHttpResponse: Response;
-
-  afterEach(() => {(Matches.findAll as sinon.SinonStub).restore()});
   
   it('Busca todas as partidas', async () => {
     sinon.stub(Matches, 'findAll').resolves(getMatches as unknown[] as Matches[]);
@@ -57,4 +55,20 @@ describe('Testes da rota /matches', () => {
     expect(chaiHttpResponse.status).to.be.equal(201);
     expect(chaiHttpResponse.body).to.deep.equal(createdMatchReturn);
   });
+
+  it('Finaliza partida com sucesso', async () => {
+    sinon.stub(Matches, 'update').resolves([1])
+    chaiHttpResponse = await chai.request(app).patch('/matches/1/finish');
+
+    expect(chaiHttpResponse.status).to.be.equal(200);
+    expect(chaiHttpResponse.body).to.deep.equal({ message: 'Finished' });
+  });
+
+  it('Atualiza a partida com sucesso', async () => {
+    chaiHttpResponse = await chai.request(app).patch('/matches/1').send(updateMatchMock);
+
+    expect(chaiHttpResponse.status).to.be.equal(200);
+  });
+
+  afterEach(() => {sinon.restore()});
 });
