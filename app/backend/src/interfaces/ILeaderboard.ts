@@ -1,4 +1,4 @@
-export default interface ILeaderboard {
+export default interface ILead {
   name: string,
   totalPoints: number,
   totalGames: number,

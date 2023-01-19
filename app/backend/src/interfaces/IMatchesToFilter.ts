@@ -1,4 +1,4 @@
-export default interface IMatchesToFilter {
+export default interface IMatches {
   id: number,
   homeTeam: number,
   homeTeamGoals: number,

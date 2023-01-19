@@ -1,1 +1,1 @@
-export type ILocation = 'awayTeam' | 'homeTeam' | null;
+export type ILoc = 'awayTeam' | 'homeTeam' | null;
