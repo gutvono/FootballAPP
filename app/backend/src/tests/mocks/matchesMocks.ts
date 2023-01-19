@@ -59,7 +59,6 @@ export const getMatches = [
       "teamName": "Santos"
     }
   }
-
 ];
 
 export const updateMatchMock = {
