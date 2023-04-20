@@ -1,8 +1,8 @@
-_Portugues_
+--- _Portugues_ ---
 
 # Boas-vindas ao repositório do projeto `Football APP`!
 
-🌱 O projeto é um site informativo sobre partidas e classificações de futebol. O objetivo principal é _aprimorar habilidades_ voltadas para o <strong>backend<strong>, utilizando _docker_ e modelagem de dados através do _Sequelize_.
+🌱 O projeto é um site informativo sobre partidas e classificações de futebol. O objetivo principal é _aprimorar habilidades_ voltadas para o **backend**, utilizando _docker_ e modelagem de dados através do _Sequelize_.
 
 # Contexto geral:
 
@@ -12,14 +12,14 @@ _Portugues_
 
 <details>
     <summary><i>Ferramentas</i>, <i>linguagens</i> e respectivas <i>funções</i> utilizadas:</summary>
-    * <strong>TypeScript</strong> (linguagem);
-    * <strong>MySQL</strong> (banco de dados);
-    * <strong>Sequelize</strong> (comunicação banco - backend);
-    * <strong>Node.js</strong> (compilação);
-    * <strong>Express</strong> (gerenciar requisições);
-    * <strong>Express async errors</strong> (capturar erros da aplicação);
-    * <strong>JWT</strong> (validação de login com token);
-    * <strong>Jest, mocha, chai, sinon</strong> (testes unitários);
+    <li> <strong>TypeScript</strong> (linguagem);</li>
+    <li> <strong>MySQL</strong> (banco de dados);</li>
+    <li> <strong>Sequelize</strong> (comunicação banco - backend);</li>
+    <li> <strong>Node.js</strong> (compilação);</li>
+    <li> <strong>Express</strong> (gerenciar requisições);</li>
+    <li> <strong>Express async errors</strong> (capturar erros da aplicação);</li>
+    <li> <strong>JWT</strong> (validação de login com token);</li>
+    <li> <strong>Jest, mocha, chai, sinon</strong> (testes unitários);</li>
 </details>
 
 
