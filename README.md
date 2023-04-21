@@ -55,6 +55,13 @@ As dependencias serão instaladas dentro dos respectivos containers, pois ao cri
 Como sempre, um projeto nunca termina de fato. Sempre haverão **melhorias** para serem aplicadas.
 
 <details>
-    <summary><strong>Futuro potencial</strong></summary>
-    <li> Melhorias estruturais seguindo alguns design de software como SOLID, POO, DDD, etc;</li>
+    <summary><strong>Futuro potencial/melhorias</strong></summary>
+    <li>Melhorias estruturais seguindo alguns design de software como SOLID, POO, DDD, etc;</li>
+    <li>Testes unitários mais específicos, expressivos e funcionais;</li>
+    <li>Expandir alguns trechos de codigos para uma melhor manutenção e entendimento;</li>
+    <li>Adicionar comentários explicativos;</li>
+    <li>Criar tela de cadastro;</li>
+    <li>A partir do que temos aqui, é possível fazer um APP informativo para futebol com todos os campeonatos, notícias e jogos, tudo em tempo real.</li>
+
+    Essas são apenas algumas ideias de melhorias e adição de novas features!
 </details>
