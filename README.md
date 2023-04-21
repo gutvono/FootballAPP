@@ -8,7 +8,8 @@
 
 <details>
     <summary>🗃️ <strong>Arquivos e pastas feitas por mim</strong></summary><br />
-    Tudo que está dentro de 📁 <strong>/backend/src</strong>. Os demais arquivos foram feitos pela escola que elaborou o projeto.
+    <p align="left">Tudo que está dentro de 📁 <strong>/backend/src</strong>. Os demais arquivos foram feitos pela escola que elaborou o projeto.</p>
+    <img align="right" alt="ball" src="https://gifs.eco.br/wp-content/uploads/2022/07/gifs-de-bolas-de-futebol-0.gif" width="100px">
 </details>
 
 <details>
