@@ -26,6 +26,7 @@
 <details>
     <summary>🚀 <strong>Como rodar o projeto</strong></summary>
     Neste projeto foi utilizado o <i>Docker</i>, para que não haja problemas com os softwares locais da máquina, além de ter um <i>ambiente isolado</i> para cada área (frontend, backend e banco de dados).
+    <br>
 
   1. **criar os containers**
 
@@ -45,7 +46,7 @@
   $ npm run dev
   ```
 
-    As dependencias serão instaladas dentro dos devidos containers, pois ao criar os containers é rodado o comando _npm install_ em cada **Dockerfile**
+As dependencias serão instaladas dentro dos devidos containers, pois ao criar os containers é rodado o comando _npm install_ em cada **Dockerfile**.
 </details>
 
 
