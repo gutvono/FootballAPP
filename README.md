@@ -4,7 +4,7 @@
 
 🌱 O projeto é um site informativo sobre partidas e classificações de futebol. O objetivo principal é _aprimorar habilidades_ voltadas para o **backend**, utilizando _docker_ e modelagem de dados através do _Sequelize_.
 
-<img align="center" alt="ball" src="https://gifs.eco.br/wp-content/uploads/2022/07/gifs-de-bolas-de-futebol-0.gif" width="100px">
+<img alt="ball" src="https://gifs.eco.br/wp-content/uploads/2022/07/gifs-de-bolas-de-futebol-0.gif" width="100px">
 
 # Contexto geral:
 
@@ -48,18 +48,13 @@
   $ npm run dev
   ```
 
-As dependencias serão instaladas dentro dos devidos containers, pois ao criar os containers é rodado o comando _npm install_ em cada **Dockerfile**.
+As dependencias serão instaladas dentro dos respectivos containers, pois ao criá-los é rodado o comando _npm install_ em cada **Dockerfile**.
 </details>
 
+# Observações
+Como sempre, um projeto nunca termina de fato. Sempre haverão **melhorias** para serem aplicadas.
 
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
-
-# :construction: README em construção ! :construction:
+<details>
+    <summary><strong>Futuro potencial</strong></summary>
+    <li> Melhorias estruturais seguindo alguns design de software como SOLID, POO, DDD, etc;</li>
+</details>
