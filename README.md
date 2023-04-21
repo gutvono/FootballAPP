@@ -4,12 +4,13 @@
 
 🌱 O projeto é um site informativo sobre partidas e classificações de futebol. O objetivo principal é _aprimorar habilidades_ voltadas para o **backend**, utilizando _docker_ e modelagem de dados através do _Sequelize_.
 
+<img align="center" alt="ball" src="https://gifs.eco.br/wp-content/uploads/2022/07/gifs-de-bolas-de-futebol-0.gif" width="100px">
+
 # Contexto geral:
 
 <details>
     <summary>🗃️ <strong>Arquivos e pastas feitas por mim</strong></summary><br />
-    <p align="left">Tudo que está dentro de 📁 <strong>/backend/src</strong>. Os demais arquivos foram feitos pela escola que elaborou o projeto.</p>
-    <img align="right" alt="ball" src="https://gifs.eco.br/wp-content/uploads/2022/07/gifs-de-bolas-de-futebol-0.gif" width="100px">
+    Tudo que está dentro de 📁 <strong>/backend/src</strong>. Os demais arquivos foram feitos pela escola que elaborou o projeto.
 </details>
 
 <details>
