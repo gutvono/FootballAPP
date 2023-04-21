@@ -48,7 +48,7 @@
   $ npm run dev
   ```
 
-    As dependencias serão instaladas dentro dos respectivos containers, pois ao criá-los é rodado o comando _npm install_ em cada **Dockerfile**.
+As dependencias serão instaladas dentro dos respectivos containers, pois ao criá-los é rodado o comando _npm install_ em cada **Dockerfile**.
 </details>
 
 # Observações
@@ -60,12 +60,14 @@ Como sempre, um projeto nunca termina de fato. Sempre haverão **melhorias** par
     <li>Testes unitários mais específicos, expressivos e funcionais;</li>
     <li>Expandir alguns trechos de codigos para uma melhor manutenção e entendimento;</li>
     <li>Adicionar comentários explicativos;</li>
-    <li>Correções de bugs;</li>
+    <li>Criar rota para corrigir tabela de classificação no frontend;</li>
     <li>Criar tela de cadastro;</li>
     <li>A partir do que temos aqui, é possível fazer um APP informativo para futebol com todos os campeonatos, notícias e jogos, tudo em tempo real.</li>
 
     Essas são apenas algumas ideias de melhorias e adição de novas features!
 </details>
+
+Deixe seu [Feedback](https://53tqbjd4mxw.typeform.com/to/eW6xIoOT)!
 
 --- _English_ ---
 
@@ -117,7 +119,7 @@ Como sempre, um projeto nunca termina de fato. Sempre haverão **melhorias** par
   $ npm run dev
   ```
 
-    The dependencies will be installed inside their respective containers because when they are created, the command _npm install_ was executed in each **Dockerfile**.
+The dependencies will be installed inside their respective containers because when they are created, the command _npm install_ was executed in each **Dockerfile**.
 </details>
 
 # Observações
@@ -129,8 +131,11 @@ As always, a project never really ends. There will always be **improvements** to
     <li>More specific, expressive, and functional unit tests;</li>
     <li>Expand some code sections for better maintenance and understanding;</li>
     <li>Add explanatory comments;</li>
+    <li>Create route to fix leaderboard in frontend;</li>
     <li>Create a registration page;</li>
     <li>From what we have here, it is possible to create an informative football app with all championships, news, and games, all in real-time.</li>
 
     These are just some ideas for improvements and new features!
 </details>
+
+Leave your [Feedback](https://53tqbjd4mxw.typeform.com/to/eW6xIoOT)!
