@@ -122,7 +122,7 @@ Deixe seu [Feedback](https://53tqbjd4mxw.typeform.com/to/eW6xIoOT)!
 The dependencies will be installed inside their respective containers because when they are created, the command _npm install_ was executed in each **Dockerfile**.
 </details>
 
-# Observações
+# Comments
 As always, a project never really ends. There will always be **improvements** to be made.
 
 <details>
